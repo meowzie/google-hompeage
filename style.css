@@ -76,8 +76,14 @@ li {
     justify-self: center;
     position: relative;
     bottom: 26vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "searchbar"
+    "thetwobuttons";
 }
 .searchbar {
+    grid-area: searchbar;
     margin: 0px;
     padding: 0px;
     height: 4.5vh;
@@ -130,4 +136,34 @@ form {
 .search:focus {
     border: none;
     outline: none;
+}
+.thetwobuttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "searchbutton" "feelinglucky";
+    grid-column-gap: 25px;
+    align-items: start;
+    position: relative;
+    bottom: 3vh;
+}
+.searchbutton {
+    justify-self: end;
+}
+.feelinglucky {
+    justify-self: start;
+}
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "leftlinks rightlinks";
+    align-items: end;
+    margin-bottom: 35px;
+}
+.luckybutton {
+    background-color: #f2f2f2;
+    /* border: none; */
+    border-radius: 4%;
+    color: #5F6368;
 }
