@@ -20,27 +20,114 @@
 .headerlinks {
     margin: 7px;
     position: relative;
-    top: 18px;
+    top: 15px;
 }
-.headertextlinks {
+.textlinks {
     color: rgba(0, 0, 0, 0.87);
     font-family: Arial, sans-serif;
 }
 .nav {
     grid-area: header;
-    justify-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "leftlinks rightlinks";
 }
 li {
     display: inline;
 }
 .apps-icon {
     color: rgba(39, 39, 39, 0.6);
-    top: 25px;
+    top: 22px;
 }
 .apps-icon:hover {
     color: rgba(39, 39, 39, 1)
 }
-.headertextlinks:hover {
+.textlinks:hover {
     text-decoration: underline;
     color: #434343;
+}
+.rightlinks {
+    padding-right: 20px;
+    grid-area: rightlinks;
+    justify-self: end;
+}
+.login {
+    background-color: #4485f6;
+    border: 1px solid #296ee6;
+    color: white;
+    height: 2.5em;
+    width: 5em;
+    font-weight: bolder;
+    font-size: 14px;
+    border-radius: 5%;
+}
+.login:hover {
+    cursor: pointer;
+}
+.leftlinks {
+    padding-left: 17px;
+    padding-top: 8px;
+    grid-area: leftlinks;
+    justify-self: start;
+}
+.form-container {
+    grid-area: form;
+    justify-self: center;
+    position: relative;
+    bottom: 26vh;
+}
+.searchbar {
+    margin: 0px;
+    padding: 0px;
+    height: 4.5vh;
+    width: 47.5vw;
+    border-radius: 24px;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-areas: "search-icon search-text voice-button";
+    border: 1px solid #dfe1e5;
+}
+.textinput {
+    grid-area: search-text;
+    justify-self: center;
+    align-self: center;
+    margin: 0px;
+    height: 100%;
+    width: 98%;
+}
+form {
+    margin: 0px;
+    padding: 0px;
+    height: 85%;
+}
+.searchicon {
+    color: #9aa0a6;
+    grid-area: search-icon;
+    justify-self: start;
+    align-self: center;
+    padding-left: 5px;
+    padding-top: 4px;
+}
+.voicebutton {
+    grid-area: voice-button;
+    justify-self: end;
+    align-self: center;
+    padding-right: 7px;
+    padding-top: 3px;
+}
+.mic {
+    height: 24px;
+}
+.search {
+    border: none;
+    height: 100%;
+    width: 98%;
+    font-size: 14px;
+    background-color: transparent;
+}
+.search:focus {
+    border: none;
+    outline: none;
 }
