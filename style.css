@@ -1,11 +1,28 @@
 .container {
-    display: flex;
-    justify-content: center;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header"
+        "logo"
+        "form"
+        "footer";
 }
 .logo-container {
-    height: 35vh;
-    display: flex;
+    grid-area: logo;
+    justify-self: center;
+    align-self: center;
 }
 .logo {
-    align-self: flex-end;
+    margin-bottom: 12.3vh;
+}
+.hyperlink {
+    color: rgba(0, 0, 0, 0.87);
+    margin: 5px;
+    position: relative;
+    top: 5px;
+}
+.nav {
+    grid-area: header;
+    justify-self: end;
 }
