@@ -1,5 +1,6 @@
 .container {
     height: 100vh;
+    font-size: 13px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -14,15 +15,32 @@
     align-self: center;
 }
 .logo {
-    margin-bottom: 12.3vh;
+    margin-bottom: 29.5vh;
 }
-.hyperlink {
-    color: rgba(0, 0, 0, 0.87);
-    margin: 5px;
+.headerlinks {
+    margin: 7px;
     position: relative;
-    top: 5px;
+    top: 18px;
+}
+.headertextlinks {
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Arial, sans-serif;
 }
 .nav {
     grid-area: header;
     justify-self: end;
+}
+li {
+    display: inline;
+}
+.apps-icon {
+    color: rgba(39, 39, 39, 0.6);
+    top: 25px;
+}
+.apps-icon:hover {
+    color: rgba(39, 39, 39, 1)
+}
+.headertextlinks:hover {
+    text-decoration: underline;
+    color: #434343;
 }
